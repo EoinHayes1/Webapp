@@ -1,0 +1,188 @@
+/* Google Map */
+#map {
+    height: 90%;
+}
+#chart {
+    height: 200px;
+    width: 50%;
+}
+#header {
+    height: 10%;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%
+    margin: 0;
+    padding: 0;
+}
+
+/* Google Legend */
+#legend {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #000;
+}
+
+#legend h3 {
+  margin-top: 0;
+}
+
+#legend img {
+  vertical-align: middle;
+}
+
+/* Google Map - User's Geolocation - Button https://developers.google.com/maps/documentation/javascript/examples/map-geolocation#maps_map_geolocation-css */
+.custom-map-control-button {
+  appearance: button;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 0.5em;
+  height: 40px;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+
+/* Filters / Dropdowns */
+#dateValue {
+    text-align: center;
+    padding: 5 0.5em;
+    font-size: 25px;
+    margin: 4px 2px;
+    height: 40px;
+    border-style: solid;
+    border-color: #325F56;
+}
+#locationValue {
+    text-align: center;
+    padding: 0 0.5em;
+    font-size: 25px;
+    margin: 4px 2px;
+    height: 40px;
+    border-style: solid;
+    border-color: #325F56;
+    border-width: 2px;
+}
+#actionValue {
+    text-align: center;
+    padding: 0 0.5em;
+    font-size: 25px;
+    margin: 4px 2px;
+    height: 40px;
+    border-style: solid;
+    border-color: #325F56;
+    border-width: 2px;
+}
+
+/* Button styling */
+.button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer; /* when hover */
+}
+
+.button:hover {
+  background-color: #CACACA;
+  color: #325F56;
+}
+
+.buttonSelected {
+  background-color: #325F56; /* #325F56 match dublinbikes logo turquoise */
+  color: white;
+}
+
+.buttonNotSelected {
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/* Weather widget */
+/* faint border around weather image - hard to see against white background */
+.border {
+    border: 2px solid #325F56;
+}
+
+/* Station Station widget */
+/* gray text for less relevant information */
+.actionSelected {
+  color: #325F56;
+  font-weight: bold;
+}
+
+/* keep widgets compact */
+p {
+    margin : 0;
+    padding-top:0;
+}
+p1 {
+    margin : 0;
+    padding-top:0;
+    font-weight: bold;
+}
+
+h1 {
+    color: #325F56;
+}
+
+h2 {
+    margin : 0;
+    padding-top:0;
+    color: #325F56; /*"readable" yellow #FDE541 */
+}
+h3 {
+    margin : 0;
+    padding-top:0;
+    color: #325F56; /*"readable" yellow #FDE541 */
+}
+
+
+/* Grid layout */
+.logo { grid-area: logo; }
+.description { grid-area: description; }
+.date { grid-area: date; }
+.location { grid-area: location; }
+.action { grid-area: action; }
+.go { grid-area: go; }
+.map { grid-area: map; }
+.weather { grid-area: weather; }
+.station { grid-area: station; }
+.chart { grid-area: chart; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo logo description description description description description'
+    'date date location location action action go'
+    'map map map map map map weather'
+    'map map map map map map station'
+    'chart chart chart chart chart chart chart'
+    'chart chart chart chart chart chart chart';
+  grid-template-rows: auto auto 300px 400px; /* row1, 2, 3, 4 */
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: justify;
+  padding: 5px 0;
+  font-size: 25px;
+}
+
+.cell {
+    font-size: 12px;
+}
